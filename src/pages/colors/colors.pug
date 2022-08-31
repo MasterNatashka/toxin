@@ -1,3 +1,5 @@
+include ~components/ColorBox/ColorBox 
+
 doctype html
 html(lang="en")
   head
@@ -8,3 +10,11 @@ html(lang="en")
   body
     h1 Colors & Type
     a(href="index.html") pages
+    +ColorBox('Dark Shade 100%', '#1F2041', 'dark100')
+    +ColorBox('Dark Shade 75%', '#1F2041', 'dark75')
+    +ColorBox('Dark Shade 50%', '#1F2041', 'dark50')
+    +ColorBox('Dark Shade 25%', '#1F2041', 'dark25')
+    +ColorBox('Dark Shade 5%', '#1F2041', 'dark5')
+    +ColorBox('Purple', '#bc9cff', 'purple')
+    +ColorBox('Green', '#6fcf97', 'green')
+

@@ -1,6 +1,6 @@
-mixin ColorBox 
+mixin ColorBox(name, number, color)
   .color-box 
-    .color-box__square
+    .color-box__square(class='color-box__square_color_' + color)
     .color-box__text
-      p.color-box__name Dark Shade 100%
-      p.color-box__number #1F2041 
+      p.color-box__name= name
+      p.color-box__number= number 

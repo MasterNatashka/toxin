@@ -28,6 +28,7 @@ const config: webpack.Configuration = {
   },
   plugins: [
     new HtmlPlugin({ template: 'src/index.pug' }),
+    new HtmlPlugin({ filename: 'colors.html', template: 'src/pages/colors/colors.pug' }),
     new HtmlPlugin({ filename: 'landing.html', template: 'src/pages/landing/landing.pug' }),
     new MiniCSSExtractPlugin({
       filename: '[name].[hash].css',

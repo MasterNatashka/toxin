@@ -1,4 +1,11 @@
 .color-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  & + & {
+    margin-top: 20px;
+  }
   &__square {
     width: 70px;
     height: 70px;
@@ -33,19 +40,11 @@
     }
   }
   &__text {
-    width: 171px;
-    height: 56px;
+    font-family: Montserrat;
+    font-size: 19px;
+    line-height: 1.46;
   }
   &__name {
-    font-family: Montserrat;
     font-weight: 700;
-    font-size: 19px;
-    line-height: 28.5px;
-  }
-  &__number {
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 27.79px;
   }
 }

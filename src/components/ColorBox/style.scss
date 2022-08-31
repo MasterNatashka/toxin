@@ -1,0 +1,26 @@
+.color-box {
+
+  &__square {
+    width: 70px;
+    height: 70px;
+    background: #1f2041;
+    border-radius: 6px;
+  }
+  &__text {
+    width: 171px;
+    height: 56px;
+    
+  }
+  &__name {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 28.5px;
+  }
+  &__number {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 27.79px;
+  }
+}

@@ -1,22 +1,20 @@
+extends ~layouts/main/main.pug
 include ~components/ColorBox/ColorBox 
 
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Colors & Type
-  body
-    header
-      h1 Colors & Type
-      a(href="index.html") pages
-    main.main-colors 
-      +ColorBox('Dark Shade 100%', '#1F2041', 'dark100')
-      +ColorBox('Dark Shade 75%', '#1F2041', 'dark75')
-      +ColorBox('Dark Shade 50%', '#1F2041', 'dark50')
-      +ColorBox('Dark Shade 25%', '#1F2041', 'dark25')
-      +ColorBox('Dark Shade 5%', '#1F2041', 'dark5')
-      +ColorBox('Purple', '#bc9cff', 'purple')
-      +ColorBox('Green', '#6fcf97', 'green')
+block vars
+  -
+    const title = 'Colors & Type'
+
+block content
+  header
+    h1 Colors & Type
+    a(href="index.html") pages
+  main.main-colors 
+    +ColorBox('Dark Shade 100%', '#1F2041', 'dark100')
+    +ColorBox('Dark Shade 75%', '#1F2041', 'dark75')
+    +ColorBox('Dark Shade 50%', '#1F2041', 'dark50')
+    +ColorBox('Dark Shade 25%', '#1F2041', 'dark25')
+    +ColorBox('Dark Shade 5%', '#1F2041', 'dark5')
+    +ColorBox('Purple', '#bc9cff', 'purple')
+    +ColorBox('Green', '#6fcf97', 'green')
 

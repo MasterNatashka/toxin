@@ -1,0 +1,11 @@
+//- mixin Text({ color, fontSize, textTransform, fontWeight, variant })
+
+mixin Text({ variant = 'p', weight, color })
+  -
+    var className = 'text text_variant_' + variant;
+    if (weight) className += ' text_weight_' + weight;
+    if (color) className += ' text_color_' + color;
+  //- `text_variant_${variant}`
+  #{variant}(class=className)
+    
+    block 

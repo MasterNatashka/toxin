@@ -1,4 +1,5 @@
 @use "components/ColorBox/style.scss";
+@use "components/Text/Text.scss";
 @use "pages/colors/colors.scss";
 @use "styles/fonts.scss";
 
@@ -11,4 +12,8 @@
   background: none;
   border: none;
   text-decoration: none;
+}
+.main-logo {
+  padding-left: 30px;
+  padding-top: 30px;
 }

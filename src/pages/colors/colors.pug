@@ -1,20 +1,40 @@
 extends ~layouts/main/main.pug
 include ~components/ColorBox/ColorBox 
+include ~components/Text/Text
 
 block vars
   -
     const title = 'Colors & Type'
 
 block content
-  header
-    h1 Colors & Type
-    a(href="index.html") pages
-  main.main-colors 
-    +ColorBox('Dark Shade 100%', '#1F2041', 'dark100')
-    +ColorBox('Dark Shade 75%', '#1F2041', 'dark75')
-    +ColorBox('Dark Shade 50%', '#1F2041', 'dark50')
-    +ColorBox('Dark Shade 25%', '#1F2041', 'dark25')
-    +ColorBox('Dark Shade 5%', '#1F2041', 'dark5')
-    +ColorBox('Purple', '#bc9cff', 'purple')
-    +ColorBox('Green', '#6fcf97', 'green')
-
+  //- header
+  //-   h1 Colors & Type
+  //-   a(href="index.html") pages
+  .colors-type
+    .colors-type__colors 
+      +ColorBox('Dark Shade 100%', '#1F2041', 'dark100')
+      +ColorBox('Dark Shade 75%', '#1F2041', 'dark75')
+      +ColorBox('Dark Shade 50%', '#1F2041', 'dark50')
+      +ColorBox('Dark Shade 25%', '#1F2041', 'dark25')
+      +ColorBox('Dark Shade 5%', '#1F2041', 'dark5')
+      +ColorBox('Purple', '#bc9cff', 'purple')
+      +ColorBox('Green', '#6fcf97', 'green')
+    
+    .colors-type__typography 
+      ul.type-list 
+        li.type-list__item
+          .type-list__variant
+            +Text({variant:'h1', weight:400, color:'dark25'}) H1
+          +Text({variant:'h1'}) This one is the sub-section or <br> widget title
+        li.type-list__item
+          .type-list__variant
+            +Text({variant:'h2', weight:400, color:'dark25'}) H2 
+          +Text({variant:'h2'}) Next one is the item title <br> inside widgets
+        li.type-list__item
+          .type-list__variant
+            +Text({variant:'h3', weight:400, color:'dark25'}) H3
+          +Text({variant:'h3'}) This is a label or CTA text 
+        li.type-list__item
+          .type-list__variant
+            +Text({variant:'p', weight:400, color:'dark25'}) Body 
+          +Text({variant:'p'}) This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.

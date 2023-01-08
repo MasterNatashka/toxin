@@ -1,8 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as webpack from "webpack";
-import HtmlPlugin from "html-webpack-plugin";
-import MiniCSSExtractPlugin from "mini-css-extract-plugin";
 // @ts-ignore
 import PugPlugin from "pug-plugin";
 
@@ -43,6 +41,10 @@ const config: webpack.Configuration = {
         include: PATHS.src,
         use: ["css-loader", "postcss-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
@@ -68,6 +70,7 @@ const config: webpack.Configuration = {
       layouts: path.resolve(__dirname, "src/layouts/"),
       pages: path.resolve(__dirname, "src/pages/"),
       styles: path.resolve(__dirname, "src/styles/"),
+      assets: path.resolve(__dirname, "src/assets/"),
       components: path.resolve(__dirname, "src/components/"),
     },
   },

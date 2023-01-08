@@ -1,9 +1,13 @@
 extends ~layouts/main-layout/main-layout
 include ~components/ColorBox/ColorBox 
 include ~components/Text/Text
+include ~components/TextField/TextField 
 
 block vars
   -
     const title = 'Form Elements'
 
 block content
+
+  +TextField()
+  +TextField()

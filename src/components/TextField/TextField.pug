@@ -1,0 +1,20 @@
+mixin TextField ({ variant = 'p', email, text, select, date }={})
+    //-   -
+    //-     var className = 'text text_variant_' + variant;
+    //-     if (email) className += ' text_email_' + email;
+    //-     if (text) className += ' text_text_' + text;
+    //-     if (select) className += ' text_select_' + select;
+    //-     if (date) className += ' text_date_' + date;
+    
+    //-   div.text-field
+    //-     div.text-field__text
+    //-     input.text-field__input
+    
+    label.text-field
+        .text-field__text 
+            +Text({variant:'h3'}) text field
+
+        input.text-field__input(type='email', placeholder='Email')
+
+
+

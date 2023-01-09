@@ -1,0 +1,30 @@
+@use "styles/colors";
+
+@mixin text($variant: "p") {
+  @if $variant == "h1" {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: colors.dark(100);
+  }
+  @if $variant == "h2" {
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 700;
+    color: colors.dark(75);
+  }
+  @if $variant == "h3" {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: colors.dark(100);
+  }
+
+  @if $variant == "p" {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: colors.dark(75);
+  }
+}

@@ -1,4 +1,5 @@
-mixin TextField ({ variant = 'p', email, text, select, date }={})
+
+mixin TextField ({ type = 'text', placeholder, value } = {})
     //-   -
     //-     var className = 'text text_variant_' + variant;
     //-     if (email) className += ' text_email_' + email;
@@ -11,10 +12,5 @@ mixin TextField ({ variant = 'p', email, text, select, date }={})
     //-     input.text-field__input
     
     label.text-field
-        .text-field__text 
-            +Text({variant:'h3'}) text field
-
-        input.text-field__input(type='email', placeholder='Email')
-
-
-
+        +Text({variant:'h3'}) text field
+        input.text-field__input(type=type, placeholder=placeholder, value=value)

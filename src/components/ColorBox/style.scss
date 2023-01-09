@@ -1,3 +1,5 @@
+@use "styles/colors.scss";
+
 .color-box {
   display: flex;
   flex-direction: row;
@@ -13,29 +15,25 @@
 
     &_color {
       &_dark100 {
-        background: #1f2041;
+        background: colors.dark(100);
       }
       &_dark75 {
-        background: #1f2041;
-        opacity: 0.75;
+        background: colors.dark(75);
       }
       &_dark50 {
-        background: #1f2041;
-        opacity: 0.5;
+        background: colors.dark(50);
       }
       &_dark25 {
-        opacity: 0.25;
-        background: #1f2041;
+        background: colors.dark(25);
       }
       &_dark5 {
-        opacity: 0.05;
-        background: #1f2041;
+        background: colors.dark(5);
       }
       &_purple {
-        background: #bc9cff;
+        background: colors.$purple;
       }
       &_green {
-        background: #6fcf97;
+        background: colors.$green;
       }
     }
   }
